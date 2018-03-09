@@ -1,0 +1,26 @@
+﻿@model ComicBookGallery.Models.ComicBook[]
+
+@{
+    ViewBag.Title = "Comic Books";
+}
+
+<div class="row">
+
+        <h2>@ViewBag.Title</h2>
+
+        @if(@Model.Length > 0)
+        {
+            foreach (var comicBook in Model)
+            {
+                <div class="col-md-3">
+                    <h4>@ViewBag.Title</h4>
+                    <img src="/Images/@comicBook.CoverImageFileName"
+                    alt="@comicBook.DisplayText" 
+                    class="img-responsive" />
+                </div>
+            }
+        }
+
+</div>
+
+
